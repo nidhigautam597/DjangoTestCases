@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MYSQL Test Case</title>
+    </head>
+    <body>
+        <center>
+            <h1>
+                MYSQL DataBase
+            </h1>
+      
+       
+        <form method="POST">
+            {% csrf_token %}
+            Firstname: <input type="text" placeholder="First Name" name="firstname"/>
+            Lastname: <input type="text" placeholder="Last Name" name="lastname"/>
+            Email: <input type="text" placeholder="Email" name="email"/>
+            <input type="submit" value="Insert"/>
+            {% if messages %}
+            {% for dislaydata  in messages %}
+            <h2 style="color: green;">displaydata</h2>
+            {% endfor %}
+            {% endif %}
+        </form>
+    </center>
+    </body>
+</html>
